@@ -25,22 +25,29 @@ class MyApp extends StatelessWidget {
               children: [
                 TextField(
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(24),
-                    ),
-                    contentPadding: const EdgeInsets.all(16.0),
-                    hintText: 'First Input',
-                  ),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(24),
+                          borderSide: BorderSide(color: Colors.orange)),
+                      contentPadding: const EdgeInsets.all(16.0),
+                      hintText: 'Enter your email here..',
+                      suffix: Icon(
+                        Icons.email,
+                        color: Colors.orangeAccent,
+                      )),
                 ),
                 const SizedBox(height: 16), // Using SizedBox for spacing
                 TextField(
+                  obscureText: true,
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(24),
-                    ),
-                    contentPadding: const EdgeInsets.all(16.0),
-                    hintText: 'Second Input',
-                  ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                      contentPadding: const EdgeInsets.all(16.0),
+                      hintText: 'your password here ..',
+                      suffix: Icon(
+                        Icons.password,
+                        color: Colors.deepOrange,
+                      )),
                 ),
               ],
             ),
